@@ -1,6 +1,21 @@
 
-body{
-  background-color: rgb(162, 187, 187);
+*{
+  box-sizing: border-box;
+  max-width:100%
+  margin:0;
+  padding:0;
+}
+::-webkit-scrollbar{
+ display:none;
+}
+
+html, body{
+background-color: white; 
+width:100%;
+font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+overflow-x: hidden;
 }
 .container{
   display: flex;
