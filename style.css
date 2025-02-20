@@ -326,6 +326,7 @@ content p{
     display: block;
     margin: 20px auto;
     top: 10px;
+    margin-right: -20px;
   }
 }
 .first{
