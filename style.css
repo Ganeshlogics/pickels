@@ -4,18 +4,21 @@
   max-width:100%
   margin:0;
   padding:0;
+ 
+  
 }
 ::-webkit-scrollbar{
  display:none;
 }
 
 html, body{
-background-color: white; 
+background-color: rgb(71, 88, 94);
 width:100%;
 font-family: Arial, sans-serif;
-margin:0;
+margin:-20px;
 padding:0;
-overflow-x: hidden;
+overflow-x:hidden;
+margin-left: -19px;
 }
 .container{
   display: flex;
@@ -76,7 +79,8 @@ input{
   background-color: transparent;
   border: none;
   cursor: pointer;
-  right: 0;
+  margin-right: -25px;
+  
 }
 
 .hideside-btn {
@@ -85,8 +89,8 @@ input{
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
+ 
+  right: 0px;
   color: white;
 }
 /* Menu Styles */
@@ -186,10 +190,8 @@ input{
   border: none;
   color:#fff;
   position: absolute;
-  top: 10px;
-  right: 20px;
-  z-index: 1001;
-  cursor: pointer;
+  top: -15px;
+  right: 15px;
 }
 
 /* Close button inside the sidebar */
@@ -199,7 +201,7 @@ input{
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: -180px;
   color: white;
 }
@@ -323,19 +325,24 @@ content p{
   .side-btn {
     display: block;
     margin: 20px auto;
+    top: 10px;
   }
 }
 .first{
   display:flex;
    justify-content:center; 
    gap:50px;
+   margin-top: -40px;
 }
    .first button{
    display:flex;
    justify-content:center;
-   gap:50px;
-   background-color:green; 
+   gap:30px;
+   background-color:green;
+   color: #fff; 
    padding:10px;
+   border: 5px;
+   border-radius: 8px;
 }
 .second h1{
   text-align: center;
@@ -357,27 +364,37 @@ body {
 h1 {
   margin-bottom: 20px;
 }
+/*this is my code*/
 
 #image-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-  border-radius: 8px;
+  grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+  gap: 10px;
+  padding: 10px;
+
 }
+
+/* Make all images the same size */
+#image-container img {
+  width: 100%; /* Makes images fill the container */
+  height: 200px;  /* Set a fixed height */
+  object-fit: cover; 
+   /* Ensure images fill their container and maintain aspect ratio */
+  
+}
+
+/* Adjust layout for smaller screens (mobile) */
+@media (max-width: 768px) {
+  #image-container {
+      grid-template-columns: repeat(2, 1fr);  /* 2 columns on mobile screens */
+  }
+}
+
 .third h1{
   color: #fff;
   font-size: 50px;
 }
 
-#image-container img {
-  width: 250px;
-  height: 180px;
-  row-gap: 50px;
-  
-  transition: all 0.3s ease;
-}
 
 button {
   margin-top: 20px;
